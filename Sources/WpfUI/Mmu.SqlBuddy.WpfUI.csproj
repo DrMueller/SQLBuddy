@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Features>IOperation</Features>
+    <CodeAnalysisRuleSet>..\..\CA_ProductionCode.ruleset</CodeAnalysisRuleSet>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mmu.Mlh.LanguageExtensions" Version="2.3.20" />
+    <PackageReference Include="Mmu.Mlh.WpfCoreExtensions" Version="1.1.15" />
+    <PackageReference Include="System.IO.Abstractions" Version="6.0.32" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Infrastructure\Assets\App.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

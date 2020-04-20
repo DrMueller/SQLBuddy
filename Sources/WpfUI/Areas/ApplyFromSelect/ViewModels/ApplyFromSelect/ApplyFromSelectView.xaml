@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect.ApplyFromSelectView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.CommandManagement.Components.CommandBars.Controls;assembly=Mmu.Mlh.WpfCoreExtensions"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <controls:CommandBar Commands="{Binding Path=Commands, Mode=OneWay}" />
+
+        <GroupBox Grid.Row="1" Header="Data">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Table" />
+                <TextBox Grid.Row="0" Grid.Column="1"
+                         Text="{Binding TableIdentifier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Grid.Row="1" Grid.Column="0" Content="File" />
+                <TextBox Grid.Row="1" Grid.Column="1"
+                         Text="{Binding CsvFilePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Grid.Row="2" Grid.Column="0" Content="SQL" />
+                <TextBox Grid.Row="2" Grid.Column="1" MinHeight="300" HorizontalAlignment="Stretch"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap" Text="{Binding InsertStatement, Mode=OneWay}" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>
