@@ -1,7 +1,9 @@
-﻿using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.Views.Interfaces;
+﻿using JetBrains.Annotations;
+using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.Views.Interfaces;
 
 namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect
 {
+    [UsedImplicitly]
     public partial class ApplyFromSelectView : IViewMap<ApplyFromSelectViewModel>
     {
         public ApplyFromSelectView()

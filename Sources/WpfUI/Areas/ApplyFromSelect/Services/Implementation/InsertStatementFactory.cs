@@ -2,10 +2,12 @@
 using System.IO.Abstractions;
 using System.Linq;
 using System.Threading.Tasks;
+using JetBrains.Annotations;
 using Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Models;
 
 namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Services.Implementation
 {
+    [UsedImplicitly]
     public class InsertStatementFactory : IInsertStatementFactory
     {
         private const string Seperator = ";";
