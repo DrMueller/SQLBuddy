@@ -23,7 +23,7 @@ namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Models
 
         private static string MapValue(string value)
         {
-            if (string.IsNullOrEmpty(value))
+            if (string.IsNullOrEmpty(value) || value.ToUpper() == "NULL")
             {
                 return "NULL";
             }
