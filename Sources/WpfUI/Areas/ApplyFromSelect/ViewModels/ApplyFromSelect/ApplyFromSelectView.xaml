@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.CommandManagement.Components.CommandBars.Controls;assembly=Mmu.Mlh.WpfCoreExtensions"
+             xmlns:attachedProperties="clr-namespace:Mmu.Mlh.WpfCoreExtensions.Areas.ViewExtensions.DragAndDrop.AttachedProperties;assembly=Mmu.Mlh.WpfCoreExtensions"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -32,7 +33,13 @@
                          Text="{Binding TableIdentifier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <Label Grid.Row="1" Grid.Column="0" Content="File" />
-                <TextBox Grid.Row="1" Grid.Column="1"
+                <TextBox Grid.Row="1"
+                         Grid.Column="1"
+                         AllowDrop="True"
+                         x:Name="txb"
+                         Drop="UserControl_Drop"
+                         PreviewDragOver="TextBox_PreviewDragOver"
+                         attachedProperties:DropBinding.Dropped="{Binding FileDropped, Mode=OneWay}"
                          Text="{Binding CsvFilePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <Label Grid.Row="2" Grid.Column="0" Content="SQL" />

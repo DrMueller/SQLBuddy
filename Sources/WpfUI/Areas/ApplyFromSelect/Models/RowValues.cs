@@ -28,15 +28,18 @@ namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Models
                 return "NULL";
             }
 
-            if (value.Any(char.IsLetter) || string.IsNullOrWhiteSpace(value))
-            {
-                return $"'{value}'";
-            }
-
             if (DateTime.TryParse(value, out var dateTime))
             {
                 return $"'{dateTime:yyyy-MM-dd HH:mm:ss}'";
             }
+
+            if (!value.Any(char.IsLetter) && !string.IsNullOrWhiteSpace(value))
+            {
+                return value;
+            }
+
+            value = value.Replace("'", "''");
+            value = $"'{value}'";
 
             return value;
         }

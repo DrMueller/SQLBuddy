@@ -1,4 +1,7 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using System.Linq;
+using System.Windows;
+using JetBrains.Annotations;
 using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.Views.Interfaces;
 
 namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect
@@ -9,6 +12,28 @@ namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect
         public ApplyFromSelectView()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_Drop(object sender, System.Windows.DragEventArgs e)
+        {
+            e.Handled = true;
+
+            if (!e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                return;
+            }
+
+            var files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+            if (files?.Any() ?? false)
+            {
+                txb.Text = files.First();
+            }
+        }
+
+        private void TextBox_PreviewDragOver(object sender, DragEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

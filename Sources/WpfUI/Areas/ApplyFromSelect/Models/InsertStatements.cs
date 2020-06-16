@@ -27,7 +27,7 @@ namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Models
             foreach (var row in _rowValues)
             {
                 sb.Append($"INSERT INTO {_tableIdentifier}");
-                sb.Append("(");
+                sb.Append(" (");
                 sb.AppendWithSeperatorExceptLast(_columnNames, ", ");
                 sb.Append(") VALUES (");
                 row.AppendValuesToSql(sb);

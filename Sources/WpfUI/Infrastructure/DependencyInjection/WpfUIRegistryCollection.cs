@@ -1,18 +1,18 @@
 ﻿using System.IO.Abstractions;
 using JetBrains.Annotations;
-using StructureMap;
+using Lamar;
 
 namespace Mmu.SqlBuddy.WpfUI.Infrastructure.DependencyInjection
 {
     [UsedImplicitly]
-    public class WpfUIRegistry : Registry
+    public class WpfUIRegistryCollection : ServiceRegistry
     {
-        public WpfUIRegistry()
+        public WpfUIRegistryCollection()
         {
             Scan(
                 scanner =>
                 {
-                    scanner.AssemblyContainingType<WpfUIRegistry>();
+                    scanner.AssemblyContainingType<WpfUIRegistryCollection>();
                     scanner.WithDefaultConventions();
                 });
 
