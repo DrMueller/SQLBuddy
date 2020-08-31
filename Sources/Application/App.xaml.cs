@@ -2,7 +2,7 @@
 using Mmu.Mlh.WpfCoreExtensions.Areas.Initialization.Orchestration.Models;
 using Mmu.Mlh.WpfCoreExtensions.Areas.Initialization.Orchestration.Services;
 
-namespace Mmu.SqlBuddy.WpfUI
+namespace Mmu.Wb.SqlBuddy
 {
     public partial class App
     {

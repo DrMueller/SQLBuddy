@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Models;
+using Mmu.Wb.SqlBuddy.Areas.ApplyFromSelect.Models;
 
-namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Services
+namespace Mmu.Wb.SqlBuddy.Areas.ApplyFromSelect.Services
 {
     public interface IInsertStatementFactory
     {

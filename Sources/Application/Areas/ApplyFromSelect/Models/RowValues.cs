@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Mmu.Mlh.LanguageExtensions.Areas.StringBuilders;
 
-namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Models
+namespace Mmu.Wb.SqlBuddy.Areas.ApplyFromSelect.Models
 {
     public class RowValues
     {

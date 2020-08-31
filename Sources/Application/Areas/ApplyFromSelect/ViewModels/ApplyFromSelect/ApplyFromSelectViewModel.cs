@@ -6,7 +6,7 @@ using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.ViewModels;
 using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.ViewModels.Behaviors;
 using Mmu.Mlh.WpfCoreExtensions.Areas.ViewExtensions.DragAndDrop.Models;
 
-namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect
+namespace Mmu.Wb.SqlBuddy.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect
 {
     [PublicAPI]
     public class ApplyFromSelectViewModel : ViewModelBase, INavigatableViewModel, IInitializableViewModel

@@ -2,7 +2,7 @@
 using JetBrains.Annotations;
 using Lamar;
 
-namespace Mmu.SqlBuddy.WpfUI.Infrastructure.DependencyInjection
+namespace Mmu.Wb.SqlBuddy.Infrastructure.DependencyInjection
 {
     [UsedImplicitly]
     public class WpfUIRegistryCollection : ServiceRegistry

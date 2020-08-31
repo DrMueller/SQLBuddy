@@ -2,9 +2,9 @@
 using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.CommandManagement.Commands;
 using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.CommandManagement.Components.CommandBars.ViewData;
 using Mmu.Mlh.WpfCoreExtensions.Areas.MvvmShell.CommandManagement.ViewModelCommands;
-using Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.Services;
+using Mmu.Wb.SqlBuddy.Areas.ApplyFromSelect.Services;
 
-namespace Mmu.SqlBuddy.WpfUI.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect
+namespace Mmu.Wb.SqlBuddy.Areas.ApplyFromSelect.ViewModels.ApplyFromSelect
 {
     public class CommandContainer : IViewModelCommandContainer<ApplyFromSelectViewModel>
     {
